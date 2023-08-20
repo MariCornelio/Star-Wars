@@ -1,8 +1,11 @@
 .sectionHeader_section {
+  width: 100%;
   height: 52px;
   padding: 16px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
   text-align: left;
   color: var(--Font-light);
   background-color: var(--Ravn-Black);
@@ -16,7 +19,6 @@
 @media (max-width: 550px) {
   .sectionHeader_section {
     justify-content: center;
-    position: relative;
   }
   .sectionHeader_div i {
     position: absolute;
