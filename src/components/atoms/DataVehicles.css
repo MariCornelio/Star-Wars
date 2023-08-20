@@ -1,0 +1,5 @@
+.dataVehicles_div h2 {
+  padding: 16px;
+  border-bottom: 1px solid var(--Text-Light-Opacity);
+  color: var(--Text-Light);
+}

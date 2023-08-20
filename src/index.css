@@ -1,0 +1,44 @@
+:root {
+  --Ravn-Black: #121212;
+  --Font-light: #f2f2f2;
+  --Text-Dark: #333333;
+  --Text-Light-Opacity: rgb(130, 130, 130, 0.3);
+  --Text-Light: #828282;
+  --Text-Emphasis: #ec5757;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.h2Default {
+  color: var(--Text-Dark);
+}
+
+.h2LowEmphasis {
+  color: var(--text-Light);
+}
+.h2HighEmphasis {
+  color: var(--Text-Emphasis);
+}
+.p1Default {
+  color: var(--Text-Dark);
+}
+.p1LowEnphasis {
+  color: var(--Text-Dark);
+}

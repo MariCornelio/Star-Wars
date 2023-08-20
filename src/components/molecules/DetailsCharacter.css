@@ -1,0 +1,16 @@
+.detailsCharacter_section {
+  display: flex;
+  justify-content: center;
+}
+.detailsCharacter_section > div {
+  width: 80%;
+}
+.detailsCharacter_section > div > h2 {
+  margin: 32px 16px 8px;
+  color: var(--Text-Dark);
+}
+@media (max-width: 550px) {
+  .detailsCharacter_section > div {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.home_article {
+  width: 100%;
+  min-height: calc(100vh - 52px);
+  display: flex;
+  justify-content: center;
+}
+.home_article > :first-child {
+  width: 30%;
+}
+.home_article > :nth-child(2) {
+  width: 70%;
+}

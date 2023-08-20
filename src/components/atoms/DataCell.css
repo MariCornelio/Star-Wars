@@ -1,0 +1,14 @@
+.dataCell_div {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--Text-Light-Opacity);
+}
+.dataCell_div :first-child {
+  color: var(--Text-Light);
+}
+.dataCell_div :nth-child(2) {
+  color: var(--Text-Dark);
+}

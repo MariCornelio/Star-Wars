@@ -1,0 +1,23 @@
+.personCell_div {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--Text-Light-Opacity);
+  cursor: pointer;
+}
+.personCell_div h2,
+.personCell_div i {
+  margin: 0;
+  color: var(--Text-Dark);
+}
+.personCell_div p {
+  margin: 3px 0;
+  color: var(--Text-Light);
+}
+
+.personCell_div:hover {
+  background-color: var(--Text-Light-Opacity);
+}
