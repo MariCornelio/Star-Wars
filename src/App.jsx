@@ -7,8 +7,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import { SectionHeader } from './components/atoms/SectionHeader';
 
+import { useContext } from 'react';
+import { CharacterContext } from './components/context/CharacterContext';
+
 const App = () => {
   const isSmallScreen = window.innerWidth <= 550;
+  const { character } = useContext(CharacterContext);
   return (
     <Router>
       <Routes>
@@ -25,7 +29,7 @@ const App = () => {
         ) : (
           <Route exact path="/" element={<Home />} />
         )}
-        <Route
+        {/* <Route
           path="/details"
           element={
             <>
@@ -33,7 +37,27 @@ const App = () => {
               <DetailsCharacter />
             </>
           }
-        />
+        /> */}
+        {Object.keys(character).length === 0 ? (
+          <Route
+            path="/details"
+            element={
+              <>
+                <SectionHeader /> <CharacterList />
+              </>
+            }
+          />
+        ) : (
+          <Route
+            path="/details"
+            element={
+              <>
+                <SectionHeader />
+                <DetailsCharacter />
+              </>
+            }
+          />
+        )}
       </Routes>
     </Router>
   );
