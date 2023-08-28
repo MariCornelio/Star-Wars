@@ -1,6 +1,7 @@
 import './DataCell.css';
 import PropTypes from 'prop-types';
-export const DataCell = ({ character }) => {
+import {  Character} from '../../interfaces/character.interface';
+export const DataCell = ({ character }:{ character: Character }) => {
   return (
     <>
       <div className="dataCell_div">

@@ -7,7 +7,7 @@ export const DetailsCharacter = () => {
   const { character } = useContext(CharacterContext);
   return (
     <section className="detailsCharacter_section">
-      {Object.keys(character).length !== 0 ? (
+      {character && Object.keys(character).length !== 0 ? (
         <div>
           <h2>General Information</h2>
           <DataCell character={character} />

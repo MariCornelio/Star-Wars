@@ -1,6 +1,7 @@
 import './DataVehicles.css';
 import PropTypes from 'prop-types';
-export const DataVehicles = ({ character }) => {
+import { Character } from '../../interfaces/character.interface';
+export const DataVehicles = ({ character }: { character: Character }) => {
   return (
     <div className="dataVehicles_div">
       {character.vehicles.length === 0 ? (

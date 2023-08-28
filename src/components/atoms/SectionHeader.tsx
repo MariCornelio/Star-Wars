@@ -10,7 +10,7 @@ export const SectionHeader = () => {
   const size = window.innerWidth <= 550;
   return (
     <section className="sectionHeader_section">
-      {Object.keys(character).length === 0 || (path === '/' && size) ? (
+      {!character || (path === '/' && size) ? (
         <h2>People of Star Wars</h2>
       ) : (
         <div className="sectionHeader_div">

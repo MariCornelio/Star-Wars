@@ -9,7 +9,6 @@ import { DetailsCharacter } from '../components/molecules/DetailsCharacter';
 import './Home.css';
 // import { LoadingCell } from '../components/molecules/LoadingCell';
 function Home() {
- 
   return (
     <>
       <SectionHeader />
