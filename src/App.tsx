@@ -9,16 +9,18 @@ import { SectionHeader } from './components/atoms/SectionHeader';
 
 import { useContext } from 'react';
 import { CharacterContext } from './components/context/CharacterContext';
+// import { Character } from './interfaces/character.interface';
+// import { Character } from './interfaces/character.interface';
 
 const App = () => {
   const isSmallScreen = window.innerWidth <= 550;
   const { character } = useContext(CharacterContext);
+  // const character: Character;
   return (
     <Router>
       <Routes>
         {isSmallScreen ? (
           <Route
-            exec
             path="/"
             element={
               <>
@@ -27,7 +29,7 @@ const App = () => {
             }
           />
         ) : (
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
         )}
         {/* <Route
           path="/details"
@@ -38,7 +40,7 @@ const App = () => {
             </>
           }
         /> */}
-        {Object.keys(character).length === 0 ? (
+        {character && Object.keys(character).length === 0 ? (
           <Route
             path="/details"
             element={

@@ -3,8 +3,9 @@ import { useContext } from 'react';
 import './PersonCell.css';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import { Character } from '../../interfaces/character.interface';
 
-export const PersonCell = ({ character }) => {
+export const PersonCell = ({ character }: { character: Character }) => {
   const { detailsCharacterId } = useContext(CharacterContext);
   const navigate = useNavigate();
   const isSmallScreen = window.innerWidth <= 550;
@@ -14,9 +15,11 @@ export const PersonCell = ({ character }) => {
     <div
       className="personCell_div"
       onClick={() => {
-        detailsCharacterId(character.id);
-        if (isSmallScreen) {
-          navigate('/details');
+        if (character.id) {
+          detailsCharacterId(character.id);
+          if (isSmallScreen) {
+            navigate('/details');
+          }
         }
       }}
     >
